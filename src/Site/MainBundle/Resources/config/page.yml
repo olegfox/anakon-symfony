@@ -1,0 +1,3 @@
+Site_main_page:
+    pattern:  /{slug}/
+    defaults: { _controller: SiteMainBundle:Page:index}

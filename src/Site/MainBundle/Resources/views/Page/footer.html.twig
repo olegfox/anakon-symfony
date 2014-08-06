@@ -1,0 +1,95 @@
+<div class="footer">
+    <div class="inner_footer">
+        <div class="row">
+            <div class="block1">
+                {% if section[1] is defined %}
+                <div class="header">{{ section[1].title }}</div>
+                {% for p in section[1].text %}
+                <a href="{{ path('Site_main_page', {section: section[1].slug, slug: p.slug}) }}">{{ p.title }}</a>
+                {% endfor %}
+                {% endif %}
+            </div>
+            <div class="block2">
+                {% if section[2] is defined %}
+                <div class="header">{{ section[2].title }}</div>
+                {% for p in section[2].text %}
+                    <a href="{{ path('Site_main_page', {section: section[2].slug, slug: p.slug}) }}">{{ p.title }}</a>
+                {% endfor %}
+                {% endif %}
+            </div>
+            <div class="block3">
+                <!-- form -->
+                <div class="form">
+                    <form class="form-horizontal">
+                        <fieldset>
+
+                            <!-- Form Name -->
+                            <legend>связаться с нами</legend>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                    <input id="name" name="name" type="text" placeholder="ИМЯ"
+                                           class="form-control input-md" required="">
+
+                            </div>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                    <input id="email" name="email" type="text" placeholder="ЭЛЕКТРОННАЯ ПОЧТА"
+                                           class="form-control input-md" required="">
+
+                            </div>
+
+                            <!-- Textarea -->
+                            <div class="form-group">
+                                    <textarea class="form-control" id="message" name="message" placeholder="СООБЩЕНИЕ"></textarea>
+                            </div>
+
+                            <!-- Button -->
+                            <div class="form-group">
+                                    <button id="send" name="send" class="btn btn-primary">Отправить</button>
+                            </div>
+
+                        </fieldset>
+                    </form>
+                    <div class="social-link">
+                        <div class="header">
+                            мы в соц. сетях
+                        </div>
+                        <div class="buttons">
+                            <a href="#"><img src="{{ asset('sitemain/images/fb.jpg') }}" alt="facebook" /></a>
+                            <a href="#"><img src="{{ asset('sitemain/images/vk.jpg') }}" alt="вконтакте" /></a>
+                            <a href="#"><img src="{{ asset('sitemain/images/inst.jpg') }}" alt="instagram" /></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end form -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="block1">
+                {% if section[3] is defined %}
+                <div class="header">{{ section[3].title }}</div>
+                {% for p in section[3].text %}
+                    <a href="{{ path('Site_main_page', {section: section[3].slug, slug: p.slug}) }}">{{ p.title }}</a>
+                {% endfor %}
+                {% endif %}
+            </div>
+            <div class="block2">
+                {% if section[4] is defined %}
+                <div class="header">{{ section[4].title }}</div>
+                {% for p in section[4].text %}
+                    <a href="{{ path('Site_main_page', {section: section[4].slug, slug: p.slug}) }}">{{ p.title }}</a>
+                {% endfor %}
+                {% endif %}
+            </div>
+            <div class="block3">
+
+            </div>
+        </div>
+        <div class="row-bottom">
+            <span>2014 Все права защищены</span>
+            <a href="http://olegmitin.ru" target="_blank">сайт создан командой олега митина</a>
+        </div>
+    </div>
+</div>

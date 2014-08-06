@@ -1,0 +1,8 @@
+Site_main_homepage:
+    pattern:  /
+    defaults: { _controller: SiteMainBundle:Main:index}
+
+#      страницы
+page:
+    resource: @SiteMainBundle/Resources/config/page.yml
+    prefix: /page

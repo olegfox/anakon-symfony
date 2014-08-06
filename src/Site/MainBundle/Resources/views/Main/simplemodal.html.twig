@@ -1,0 +1,13 @@
+<div class="headd">{% if item is defined %}{{ item.title }}{% endif %}</div>
+<div class="cols">
+    <div class="col1">
+        <div class="preview">{% if item is defined %}<img src='{% path item.img, 'preview' %}' alt='{% path item.img, 'big' %}' />{% for i in item.images %}<img src='{{ asset(i.getMinSrc()) }}' alt='{{ asset(i.getSrc()) }}' />{% endfor %}{% endif %}</div>
+    </div>
+    <div class="col2">
+        {% if item is defined %}<img src='{% path item.img, 'big' %}' alt='{{ item.title }}' />{% endif %}
+    </div>
+    <div class="col3">
+        <div class="description">{% if item is defined %}{{ item.text|raw }}{% endif %}</div>
+    </div>
+</div>
+

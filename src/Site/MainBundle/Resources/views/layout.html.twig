@@ -1,0 +1,39 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    <!-- style -->
+    <link href="{{ asset('sitemain/js/textillate/assets/animate.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('sitemain/css/style.css') }}"/>
+    <!-- end style -->
+{% endblock %}
+{% block body %}
+    <div class="logo">
+        <a href="{{ path('Site_main_homepage') }}">Happy Charms Family</a>
+    </div>
+    <div class="wrap_menu">
+        {{ knp_menu_render('SiteMainBundle:FrontendMenuBuilder:menu') }}
+    </div>
+    {% block slider %}
+
+    {% endblock %}
+    {% block about %}
+
+    {% endblock %}
+    {% block boxes %}
+
+    {% endblock %}
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <!-- script -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="{{ asset('sitemain/js/script.js') }}"></script>
+    <script src="{{ asset('sitemain/js/textillate/assets/jquery.fittext.js') }}"></script>
+    <script src="{{ asset('sitemain/js/textillate/assets/jquery.lettering.js') }}"></script>
+    <script src="{{ asset('sitemain/js/textillate/jquery.textillate.js') }}"></script>
+
+    <!-- end script -->
+{% endblock %}

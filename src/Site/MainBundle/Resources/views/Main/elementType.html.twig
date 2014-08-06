@@ -1,0 +1,5 @@
+{% if element is defined %}
+    <div class="cubes">
+        {% for e in element %}<div class="cube{% if loop.index%4 == 0 %} last{% endif %}" onclick="showItem({{ e.id }}, '{{ e.title }}', '{{ e.description|raw|url_encode }}', '{% path e.img, 'big' %}', '{% path e.img, 'preview' %}', '{{ e.getJsonImages() }}', '{{ e.getJsonVideo() }}');"><img src="{{ image('.'~media_public_url(e.img, 'reference')).zoomCrop(280, 280) }}"/><div class="wrap_hint">{{ e.title }}</div></div>{% endfor %}
+    </div>
+{% endif %}

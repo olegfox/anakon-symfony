@@ -1,0 +1,7 @@
+{% extends 'SiteMainBundle::layout.html.twig' %}
+{% block content %}
+    {{ parent() }}
+    {% if columns is defined %}
+        {% for col in columns %}<div class="col col{{ loop.index0 }}">{% for p in col %}<div onclick="showItem('{{ p.slug }}', '{{ p.title }}', '{{ p.text }}', '{% path p.img, 'big' %}', '{% path p.img, 'preview' %}', '{{ p.getJsonImages() }}');" class="post{% if loop.index%3 == 0 %} last{% endif %}"><img src="{% path p.img, 'big' %}"/><div class="wrapper_hint"><div class="hint">{{ p.title }}</div></div></div>{% endfor %}</div>{% endfor %}
+    {% endif %}
+{% endblock %}

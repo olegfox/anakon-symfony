@@ -1,0 +1,47 @@
+{% extends 'SiteMainBundle::layout.html.twig' %}
+
+{% block slider %}
+    <div class="slider">
+        <img src="{{ asset('sitemain/img/slider.jpg') }}" alt="{{ asset('sitemain/img/slider.jpg') }}"/>
+    </div>
+{% endblock %}
+    {% block about %}
+        <div class="about">
+            <h2>about</h2>
+
+            <p>
+                Constantly blooming with imagination and creativity since it was born in 1988,
+
+                RAS loves to create women’s shoes that are perfect for both day and night. Each style carries a message of love
+
+                and pleasure perfect for all occasions, and combines an eye catching mixture of textures with rich and vivid
+                decorations.
+
+                RAS is an expression of creativity, craft, texture and shape.
+
+                RAS is a Young at Heart Woman who enjoys nature and the city with a refined taste for fashion.
+            </p>
+        </div>
+    {% endblock %}
+    {% block boxes %}
+        <div class="wrap_boxes">
+            <div class="boxes">
+                <div class="box">
+                    <img src="{{ asset('sitemain/img/box1.jpg') }}" alt="{{ asset('sitemain/img/box1.jpg') }}"/>
+                    <a href="" class="description"><span>collections</span></a>
+                </div>
+                <div class="box">
+                    <img src="{{ asset('sitemain/img/box2.jpg') }}" alt="{{ asset('sitemain/img/box2.jpg') }}"/>
+                    <a href="" class="description"><span>store finder</span></a>
+                </div>
+                <div class="box">
+                    <img src="{{ asset('sitemain/img/box3.jpg') }}" alt="{{ asset('sitemain/img/box3.jpg') }}"/>
+                    <a href="" class="description"><span>catalog</span></a>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+{% block content %}
+
+{% endblock %}

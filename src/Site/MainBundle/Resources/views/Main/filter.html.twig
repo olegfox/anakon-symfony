@@ -1,0 +1,1 @@
+<div class="filter">{% for c in category %}<div class="itemFilter"><a href="{{ path('Site_main_category', {'menu' : currentmenu.slug, 'slug' : c.slug}) }}">{{ c.title }}</a></div>{% endfor %}</div>

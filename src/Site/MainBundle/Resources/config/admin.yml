@@ -1,0 +1,12 @@
+# Site/MainBundle/Resources/config/admin.yml
+services:
+    sonata.admin.menu:
+        class: Site\MainBundle\Admin\MenuAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Меню" }
+        arguments:
+            - ~
+            - Site\MainBundle\Entity\Menu
+            - ~
+        calls:
+            - [ setTranslationDomain, [SiteMainBundle]]

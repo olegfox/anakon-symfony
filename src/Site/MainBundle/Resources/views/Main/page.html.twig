@@ -1,0 +1,8 @@
+{% extends 'SiteMainBundle::layout.html.twig' %}
+{% block content %}
+    {% if currentSecondMenu is defined %}
+        <div class="text">
+            {{ currentSecondMenu.text|raw }}
+        </div>
+    {% endif %}
+{% endblock %}

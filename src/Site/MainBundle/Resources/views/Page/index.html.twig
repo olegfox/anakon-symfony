@@ -1,0 +1,6 @@
+{% extends 'SiteMainBundle::layout.html.twig' %}
+{% block content %}
+    {% if page is defined %}
+        {{ page.text|raw }}
+    {% endif %}
+{% endblock %}

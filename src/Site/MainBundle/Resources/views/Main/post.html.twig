@@ -1,0 +1,12 @@
+{% extends 'SiteMainBundle::layout.html.twig' %}
+{% block content %}
+    {{ parent() }}
+    <div class="contentInner">
+    {% if post is defined %}
+        <div class="head">{{ post.title }}</div>
+    {% endif %}
+    {% if post is defined %}
+        {{ post.text|raw }}
+    {% endif %}
+    </div>
+{% endblock %}
